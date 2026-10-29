@@ -8,8 +8,8 @@ desktop.ini
 .obsidian/
 .trash/
 
-# Claude Code's copy of the skills (made by .tools/setup/copy_skills_for_claude.py)
-.claude/
+# Per-machine Claude Code settings
+.claude/settings.local.json
 
 # Scratch work: downloaded PDFs, podcast transcripts before voicing, slide frames
 build/

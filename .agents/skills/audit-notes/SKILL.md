@@ -3,7 +3,7 @@ name: audit-notes
 description: Check vault notes against the note-making research (one idea per note, titles that name the idea, notes that stand alone, useful links) and propose restructuring, applied only after approval. Use when the user asks to tidy, review, restructure, split or improve their notes.
 ---
 
-# /audit-notes
+# Audit notes
 
 Review vault notes against the research-grounded principles in `01 - Projects/Learning/Note-making/`.
 
@@ -80,8 +80,8 @@ Score each note against these five checks. Each is derived from the note-making 
 
 - No silent edits — always show and wait for approval.
 - No deleting notes.
-- No creating flashcards — that is `/learn`.
-- No analyzing writing quality — that is `/analyze-writing`. This skill checks note structure, not prose.
+- No creating flashcards — that is the `learn` skill.
+- No analyzing writing quality — that is the `analyze-writing` skill. This skill checks note structure, not prose.
 - No imposing a single "correct" note length — atomicity is about self-containment and irreducibility, not brevity.
 - No prescribing linking density targets — the corpus does not specify a number; the principle is that obvious connections should be explicit.
 - No treating Ahrens' fleeting/literature/permanent taxonomy as canonical — the corpus is clear that this is one interpretation, not Luhmann's vocabulary.

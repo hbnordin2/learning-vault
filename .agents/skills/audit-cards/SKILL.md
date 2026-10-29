@@ -3,7 +3,7 @@ name: audit-cards
 description: Check flashcards in the vault against the flashcard-formulation rubric (one fact per card, no lists behind one prompt, the question cues the whole answer) and propose fixes, which are applied only after approval. Use when the user asks to check, clean up, fix or improve their flashcards or Anki cards.
 ---
 
-# /audit-cards
+# Audit cards
 
 Review and fix flashcards in the vault, scoring each against the research-grounded rubric in `01 - Projects/Learning/Flashcard formulation/`.
 
@@ -83,4 +83,4 @@ Score each card against these six checks. Each is derived from the formulation c
 - No fabricating Anki IDs.
 - No removing cards entirely.
 - No lecturing about flashcard theory — diagnose, propose, fix. The corpus is the reference if the user wants to understand why.
-- No creating cards for material that was not already carded — this skill audits existing cards, it does not add new knowledge. Card creation is `/learn`.
+- No creating cards for material that was not already carded — this skill audits existing cards, it does not add new knowledge. Card creation is the `learn` skill.

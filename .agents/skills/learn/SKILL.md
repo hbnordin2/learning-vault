@@ -1,9 +1,9 @@
 ---
 name: learn
-description: A Socratic learning conversation about a topic in the vault: the user explains first, the agent probes the gaps without lecturing, and only facts the user has shown they understand become flashcards, written into the note for the Obsidian-to-Anki plugin. Use when the user says “teach me”, “help me understand”, “let's discuss”, “quiz me in conversation”, “I want to really learn this”, or asks for flashcards on a topic.
+description: "A Socratic learning conversation about a topic in the vault: the user explains first, the agent probes the gaps without lecturing, and only facts the user has shown they understand become flashcards, written into the note for the Obsidian-to-Anki plugin. Use when the user says “teach me”, “help me understand”, “let's discuss”, “quiz me in conversation”, “I want to really learn this”, or asks for flashcards on a topic."
 ---
 
-# /learn
+# Learn
 
 A learning conversation that follows the doctrine in `01 - Projects/Learning/`.
 
@@ -59,6 +59,15 @@ Do not summarise the note to the user. It is your answer key, not a lecture scri
    ```
 
    The obsidian-to-anki plugin syncs these to Anki. Do not push to Anki directly.
+
+## Cards from a chat session
+
+The user may tutor themselves in a chat app and save a session record (`type: chat-session`, usually in `01 - Projects/Learning/Worksheets/`). Its "Flashcards to add" list holds facts the user explained correctly in that session. When the user asks to add them:
+
+1. Read the record and the source note each card names.
+2. Check each card against the source note and the card rules below. Rewrite any that break a rule, and drop any the note does not support.
+3. Propose them in the usual format and wait for approval.
+4. Write the approved cards into the source note, as in step 6. Leave the session record as it is.
 
 ## Card rules
 

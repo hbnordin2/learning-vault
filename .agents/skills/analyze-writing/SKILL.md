@@ -3,7 +3,7 @@ name: analyze-writing
 description: Diagnose a piece of writing against the reading-comprehension research in the vault (cognitive load, coherence, given-before-new, concreteness, assumed knowledge, signposting) and propose concrete rewrites. Use when the user asks for feedback on a draft, a paper, a grant section, a lecture handout or any prose, or asks “is this clear?” or “how can I make this easier to read?”.
 ---
 
-# /analyze-writing
+# Analyze writing
 
 Analyze prose against the research-grounded comprehension principles in `01 - Projects/Learning/Writing/`.
 

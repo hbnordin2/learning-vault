@@ -1,3 +1,3 @@
 @AGENTS.md
 
-Claude Code reads skills from `.claude/skills/`, not `.agents/skills/`. If `.claude/skills/` is missing or older than `.agents/skills/`, run `uv run .tools/setup/copy_skills_for_claude.py` first.
+Claude Code reads skills from `.claude/skills/`, a copy of `.agents/skills/`. Edit skills only in `.agents/skills/`, then run `uv run .tools/setup/sync_skills.py`.

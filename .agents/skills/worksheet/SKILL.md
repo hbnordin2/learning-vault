@@ -3,18 +3,18 @@ name: worksheet
 description: Make a practice worksheet on anything the user wants to learn (a vault folder, a note, a paper, a podcast transcript, a web page) with Quiz Block multiple-choice questions and explanations, confidence marks, recall prompts with hidden model answers, and re-tests of what earlier worksheets show was missed. Also marks a finished worksheet. Use when the user asks for a worksheet, quiz, practice questions, self-test, “test me on this”, or says they finished a worksheet.
 ---
 
-# /worksheet
+# Worksheet
 
 Make one worksheet that makes the user retrieve, apply and tell apart the ideas in a source, with feedback after every answer. The design comes from `01 - Projects/Learning/The operating system/Learning from worksheets.md`: read it once per session before writing a worksheet. It holds the evidence for every rule below, and this skill does not repeat it.
 
-The worksheet is the test, and the user takes it. Never answer for the user, never put an answer where it is visible before the attempt, and never add Anki cards (cards come only from `/learn`).
+The worksheet is the test, and the user takes it. Never answer for the user, never put an answer where it is visible before the attempt, and never add Anki cards (cards come only from the `learn` skill).
 
 ## 1. Find the source and the goal
 
 The user names the source in their own words: a folder, a note, a paper, a podcast, a URL, or a topic. Resolve it:
 
 - **Vault folder or topic:** find the notes with Glob and Grep under `01 - Projects/`. Read the hub note first, then the notes the worksheet will cover. For a large folder, cover the hub's "where to start" path or ask which part.
-- **Paper:** use the `/paper` note in `03 - Resources/Papers/` if one exists, and the PDF text for detail.
+- **Paper:** use the paper note in `03 - Resources/Papers/` if one exists, and the PDF text for detail.
 - **Podcast:** read the transcript note in `01 - Projects/Learning/Podcasts/`.
 - **URL:** read it with the `defuddle` skill.
 
@@ -30,6 +30,8 @@ List `01 - Projects/Learning/Worksheets/`. Read every filled-in worksheet on the
 - `[r]` is a right answer, `[w]` a wrong one, and `[c]` the correct option of a question that was answered wrongly or not at all. A block with no `[r]` or `[w]` was not answered.
 - `- [x] Sure` just above a quiz block means the user was confident. `[w]` with `- [x] Sure` is a **confident error**, which is the highest-priority item to re-test.
 - In recall and explain items, an unticked `- [ ] Got it` means the user marked their own answer as wrong. Read what they wrote, too.
+
+The same folder can hold **chat session records** (`type: chat-session` in the frontmatter), saved from a quiz or tutoring session in ChatGPT or the Claude app. Treat their "Wrong" items as missed, and their "Sure but wrong" items as confident errors.
 
 From this, collect: missed items, low-confidence right answers, concepts the user confuses with each other, and the overall level (mostly right means move toward application and telling ideas apart; mostly wrong means add worked examples and smaller steps). Spacing needs at least a day between attempts, so items from a worksheet finished today are not re-tested yet.
 
@@ -122,4 +124,4 @@ Commit and push the worksheet. Tell the user the path, how many items of each ki
 
 ## 6. When the user says they finished
 
-Read the filled-in worksheet. Report in plain sentences: what they got right, each miss with the idea behind it, any confident errors, and how their `Sure` marks matched their results. Do not re-teach at length: the explanations are already in the worksheet. Suggest the next worksheet on the topic no sooner than the next day, and offer `/learn` for any idea they missed twice. Commit and push the filled-in file.
+Read the filled-in worksheet. Report in plain sentences: what they got right, each miss with the idea behind it, any confident errors, and how their `Sure` marks matched their results. Do not re-teach at length: the explanations are already in the worksheet. Suggest the next worksheet on the topic no sooner than the next day, and offer the `learn` skill for any idea they missed twice. Commit and push the filled-in file.

@@ -1,9 +1,9 @@
 ---
 name: podcast
-description: Make a 45–60 minute two-host learning podcast from vault notes: the agent writes the transcript, learncast voices it with ElevenLabs (or OpenAI or Gemini), and the episode is published to the private podcast feed for the phone. Built for listening while cooking, walking or relaxing: one core idea per episode, approached from several angles so a listener who drifts off can rejoin. Use when the user asks for a podcast, an episode, an audio version, or “something to listen to” about a topic or note.
+description: "Make a 45–60 minute two-host learning podcast from vault notes: the agent writes the transcript, learncast voices it with ElevenLabs (or OpenAI or Gemini), and the episode is published to the private podcast feed for the phone. Built for listening while cooking, walking or relaxing: one core idea per episode, approached from several angles so a listener who drifts off can rejoin. Use when the user asks for a podcast, an episode, an audio version, or “something to listen to” about a topic or note."
 ---
 
-# /podcast
+# Podcast
 
 Turn a vault topic into a 45–60 minute two-host episode designed for **second-screen listening** — the listener is cooking, walking, or otherwise occupied and *will* zone out for stretches. The design is grounded in `01 - Projects/Learning/The operating system/Learning from passive audio.md` — that note holds the evidence; this skill operationalises it.
 

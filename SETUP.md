@@ -1,6 +1,6 @@
 # Setup instructions for the agent
 
-These are instructions for a coding agent (Codex, Claude Code, or similar) that is setting up this vault for its owner. The owner pasted the prompt from `README.md`, which pointed you here. Follow the steps in order.
+These are instructions for a coding agent (Codex, Claude Code, Cursor, or similar) that is setting up this vault for its owner. The owner pasted the prompt from `README.md`, which pointed you here. Follow the steps in order.
 
 ## How to work with the owner
 
@@ -150,13 +150,15 @@ If the owner prefers not to, Codex asks for approval each time a command needs t
 
 **Codex.** Codex reads `AGENTS.md` and the skills in `.agents/skills/` whenever it is started in the vault folder. Show the owner how to start it there. They can type `$` to pick a skill, but asking in plain words works too.
 
-**ChatGPT.** In ChatGPT's settings, the owner can connect GitHub and give it access to the vault repository. ChatGPT can then read the notes when asked about them. It cannot run the podcast tools, which need Codex on the laptop.
+**Cursor** (if the owner uses it): open the vault folder in Cursor. It reads `AGENTS.md` and the skills in `.agents/skills/` without any setup. Skills can also be picked by typing `/` in the Agent chat.
 
-**Claude Code** (if the owner uses it): run `uv run .tools/setup/copy_skills_for_claude.py`.
+**Claude Code** (if the owner uses it): start it in the vault folder. It reads `CLAUDE.md` and the copy of the skills in `.claude/skills/`, which is already in the repository.
+
+**ChatGPT and the Claude app.** These can read the notes and talk about them, including by voice, through a project. Walk the owner through `00 - Start here/Talking to your notes in ChatGPT or Claude.md` now if they want it, including pasting the instructions from `00 - Start here/Study modes for chat apps.md`. For ChatGPT, make the upload files first: `uv run .tools/setup/bundle_for_chat.py "01 - Projects/Learning"`, then help the owner upload everything in `build/chat-upload/`.
 
 ## 10. Finish
 
 1. Write a short note `00 - Inbox/Setup — <today's date>.md` that lists what was set up on this device and what was skipped. Commit and push it, and check that it arrives on GitHub (`gh repo view --web` opens the repository).
 2. If the phone is set up, ask the owner to open Obsidian on the phone and look for the note. This proves the sync works in both directions once they edit it and you `git pull` it back.
-3. Tell the owner, in plain sentences, what they can now ask for (the table in `AGENTS.md`), with one example each. Good first requests: "Write up this paper" with a PDF, "Make me a 45-minute podcast on the spacing effect", "Give me a worksheet on `01 - Projects/Learning/Foundations`".
+3. Tell the owner to open `00 - Start here/Start here.md` in Obsidian: it explains everything in plain words. Then tell them, in plain sentences, what they can now ask for (the table in `AGENTS.md`), with one example each. Good first requests: "Write up this paper" with a PDF, "Make me a 45-minute podcast on the spacing effect", "Give me a worksheet on `01 - Projects/Learning/Foundations`".
 4. Tell them what was skipped and that they can ask to set it up later by saying "finish the setup in SETUP.md".

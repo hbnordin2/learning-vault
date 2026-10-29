@@ -1,9 +1,9 @@
 ---
 name: paper
-description: Rewrite a research paper (PDF, arXiv link, DOI or journal URL) into a plain-English vault note that keeps every claim at its original strength: a full rewrite in a fixed reading order, not a summary. Optionally also make a podcast episode covering the whole paper and a narrated slide video. Use when the user shares a paper, says “read this paper”, “write up this paper”, “explain this article”, “add this paper to my vault”, or asks for a podcast or video of a paper.
+description: "Rewrite a research paper (PDF, arXiv link, DOI or journal URL) into a plain-English vault note that keeps every claim at its original strength: a full rewrite in a fixed reading order, not a summary. Optionally also make a podcast episode covering the whole paper and a narrated slide video. Use when the user shares a paper, says “read this paper”, “write up this paper”, “explain this article”, “add this paper to my vault”, or asks for a podcast or video of a paper."
 ---
 
-# /paper
+# Paper
 
 Turn a research paper into a note a returning reader can skim in five minutes and trust. The output is a **rewrite, not a summary**: every finding, number, condition, and caveat that matters in the main body survives. What changes is the order and the sentences.
 
@@ -55,7 +55,7 @@ Run the `simple-english` skill's document self-check on the note: split sentence
 
 ## 3. Podcast (optional)
 
-Write it the way `/podcast` (`.agents/skills/podcast/SKILL.md`) says, with one change: the episode covers **every finding in the note**, not one core insight. Use the note's order (setup, how it was graded, results one by one, limits, what to do), one segment per finding. Keep every other `/podcast` technique in each segment: open by restating in one line where the episode is so far (so a listener who drifted can rejoin), give a concrete example before the principle, have one host pose a question to the listener and the other guess (often wrong) before the answer, ask deep questions, round the numbers, and avoid lists. End with the whole paper restated in a few sentences.
+Write it the way the `podcast` skill says, with one change: the episode covers **every finding in the note**, not one core insight. Use the note's order (setup, how it was graded, results one by one, limits, what to do), one segment per finding. Keep every other `podcast` technique in each segment: open by restating in one line where the episode is so far (so a listener who drifted can rejoin), give a concrete example before the principle, have one host pose a question to the listener and the other guess (often wrong) before the answer, ask deep questions, round the numbers, and avoid lists. End with the whole paper restated in a few sentences.
 
 Default length is 15–20 minutes (2,800–3,500 words, about 8,000–10,000 ElevenLabs credits; 2,400 words voice to about 13 minutes). State the credit estimate before voicing. Publish with `.tools/media-feed/publish.py` and link it from the note.
 
@@ -72,4 +72,4 @@ A narrated slide video, about 5 minutes:
 
 Commit and push the note (media never goes in git). Report the note path, the media links, the credits spent, and anything in the paper that the note could not resolve.
 
-Then offer a `/learn` session on the note (`.agents/skills/learn/SKILL.md`). Reading a clear rewrite feels like understanding but builds little memory (see `01 - Projects/Learning/Foundations/The metacognitive trap.md`). Recall is what makes it stick, so `/learn` asks the user to explain the paper first, probes the gaps, and writes flashcards only after they show they understand it. Do not add flashcards to the note as part of `/paper`.
+Then offer a `learn` session on the note. Reading a clear rewrite feels like understanding but builds little memory (see `01 - Projects/Learning/Foundations/The metacognitive trap.md`). Recall is what makes it stick, so the `learn` skill asks the user to explain the paper first, probes the gaps, and writes flashcards only after they show they understand it. Do not add flashcards to the note as part of this skill.
