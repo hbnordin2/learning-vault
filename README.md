@@ -87,4 +87,4 @@ Open `00 - Start here/Start here.md` in Obsidian after setup. It explains, witho
 
 ## Credits
 
-`simple-english` is by AminBlg, and `defuddle`, `obsidian-markdown`, `obsidian-bases` and `json-canvas` are from Steph Ango's obsidian-skills, all under the MIT licence (see the licence files in `.agents/skills/`). The Obsidian plugins are by their authors: Git by Vinzent03, Quiz Block by olliecheng, Obsidian_to_Anki by Pseudonium.
+This repository is under the MIT licence (`LICENSE`). `simple-english` is by AminBlg, and `defuddle`, `obsidian-markdown`, `obsidian-bases` and `json-canvas` are from Steph Ango's obsidian-skills, all under the MIT licence (see the licence files in `.agents/skills/`). The Obsidian plugins are by their authors: Git by Vinzent03, Quiz Block by olliecheng, Obsidian_to_Anki by Pseudonium.
