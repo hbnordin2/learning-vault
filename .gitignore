@@ -1,0 +1,33 @@
+# Operating-system clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Obsidian settings are per device: each laptop and phone keeps its own
+# plugins and layout, so none of it is synced through git.
+.obsidian/
+.trash/
+
+# Claude Code's copy of the skills (made by .tools/setup/copy_skills_for_claude.py)
+.claude/
+
+# Scratch work: downloaded PDFs, podcast transcripts before voicing, slide frames
+build/
+
+# Python
+.venv/
+__pycache__/
+
+# Secrets never live in the vault; they belong in ~/.config/learning-vault/.env
+.env
+.env.*
+!.env.example
+
+# Audio and video go to the podcast feed, not git (GitHub rejects files over 100 MB)
+*.mp3
+*.mp4
+*.m4a
+*.m4b
+*.wav
+*.mov
+*.m4v

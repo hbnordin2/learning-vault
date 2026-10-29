@@ -1,0 +1,6 @@
+# Keep line endings consistent between macOS, Windows and the phone.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.pdf binary
+*.docx binary

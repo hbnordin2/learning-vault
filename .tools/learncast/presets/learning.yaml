@@ -1,0 +1,48 @@
+# Learning-optimised conversation preset.
+# Used by `generate` (the standalone LLM path). When Claude writes the
+# transcript directly, these instructions are baked into Claude's prompt instead.
+
+conversation_style:
+  - socratic
+  - curious
+  - warm
+  - concrete
+
+roles_person1: >
+  The explainer. Lays out the core idea, then builds structure: what depends on
+  what, why it matters, where it breaks. Reaches for analogies and worked
+  examples over definitions.
+
+roles_person2: >
+  The learner-advocate and re-anchorer. Asks the question the listener is
+  thinking, requests a concrete example, pushes back on hand-waving — but
+  crucially, periodically pulls back to the core idea ("OK so wait, let me make
+  sure I've got this — the thing you're really saying is..."). This re-anchoring
+  is a re-entry ramp for the zoned-out listener.
+
+dialogue_structure:
+  - Anchor — the one insight this episode is about, stated plainly in one sentence
+  - First pass — explain it through one concrete example or scenario
+  - Re-anchor — restate the core idea in different words
+  - Second pass — a different angle, analogy, or domain where the same idea shows up
+  - Re-anchor — return to the core idea, connect the two passes
+  - Stress-test — an edge case, common misconception, or "you'd think X but actually"
+  - Re-anchor and close — the insight one final time, landing it cleanly
+
+engagement_techniques:
+  - multiple angles on the same idea (not multiple ideas)
+  - re-anchoring after every segment ("so the thing we keep coming back to is...")
+  - concrete examples before abstract statements
+  - rhetorical questions that re-pose the core insight
+
+user_instructions: >
+  Design for second-screen listening — the listener is cooking, walking, or doing
+  something else and WILL zone out for stretches. One core insight per episode,
+  not one topic. Return to the central idea every 90–120 seconds so a listener
+  who tunes back in can re-enter without backtracking. Each 2-minute segment
+  should be self-contained: comprehensible even if the listener missed what came
+  before. Repetition is the mechanism, not a flaw — restate the core idea in
+  different words, through different examples, from different angles. Keep
+  information density low: more time per idea, not more ideas per minute.
+  Natural spoken rhythm with contractions; no jargon without immediate unpacking.
+  Never read bullet points aloud.

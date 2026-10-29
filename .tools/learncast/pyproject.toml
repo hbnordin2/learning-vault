@@ -1,0 +1,24 @@
+[project]
+name = "learncast"
+version = "0.1.0"
+description = "Turn vault notes, files, URLs, or topics into a two-host learning podcast."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "typer>=0.12",
+    "httpx>=0.27",
+    "pyyaml>=6.0",
+    "python-frontmatter>=1.1",
+    "pypdf>=4.2",
+    "rich>=13.7",
+]
+
+[project.scripts]
+learncast = "learncast.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["learncast"]

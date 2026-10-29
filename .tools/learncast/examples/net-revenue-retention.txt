@@ -1,0 +1,39 @@
+# Demo transcript — written by Claude from the vault note
+# "01 - Projects/Go-to-market/Net revenue retention.md"
+# Voice it with: learncast synth examples/net-revenue-retention.txt --title "Net revenue retention" -p <provider>
+
+HOST_A: Okay, so I want to talk about net revenue retention. NRR. It's one of those SaaS metrics that gets thrown around a lot, and I think most people kind of nod along without really holding onto what it's measuring.
+
+HOST_B: Honestly, yeah. I hear it next to churn all the time and I sort of assume they're the same family. Are they?
+
+HOST_A: Same family, but NRR is the one that actually tells you whether your existing customers are worth more over time. Here's the setup. Take a cohort — just the customers you already had at the start of some period. Forget new logos entirely, don't count them. NRR asks: a year later, how much revenue is that same group giving you compared to where they started?
+
+HOST_B: So no new customers in the number at all. Just, did the people I already had grow or shrink.
+
+HOST_A: Exactly. And the magic line is one hundred percent. If you're above a hundred, that original group is spending more than it used to — expansion is outrunning the people who left. Below a hundred, the group is leaking faster than it grows.
+
+HOST_B: Wait, above a hundred percent — that means the cohort grows even if nobody new ever signs up?
+
+HOST_A: That's the whole point, yeah. The installed base compounds on its own. And the formula's actually clean: you take the cohort's starting revenue, add expansion, subtract contraction and churn, divide by where you started. Expansion is more seats, more usage, upgrades, cross-sells. Contraction is downgrades. Churn is people who cancel outright.
+
+HOST_B: Okay so give me the why-do-I-care. Why does this metric specifically matter for product-led growth?
+
+HOST_A: Because of how PLG companies are shaped. You land small — freemium, a couple of self-serve seats, tiny initial contract. So almost all your growth has to come from inside the account afterward. More seats, more usage, moving up a tier. NRR is the metric that captures exactly that motion.
+
+HOST_B: Whereas a sales-led company lands big with a huge contract up front.
+
+HOST_A: Right, and that's the asymmetry I find genuinely interesting. Land big and you've got less room above you — there's a ceiling, you've kind of already sold them the thing. Land small and there's all this headroom to expand into. So NRR is structurally more central to PLG economics. A PLG company with strong NRR can keep growing ARR even if new-customer acquisition stalls.
+
+HOST_B: That sounds almost too good. Is there a catch, or is this just the thing everyone should optimize?
+
+HOST_A: There's a real catch, and I want to be careful here because the benchmark numbers get quoted like they're physical constants. Median NRR across SaaS is somewhere around a hundred and two to a hundred and four percent. Top quartile, one fifteen, one twenty plus. But those come from surveys — OpenView, Bessemer — and they're drawn from venture-backed portfolios that survived to the reporting date.
+
+HOST_B: Ah. So the companies doing badly just aren't in the sample.
+
+HOST_A: They're underrepresented, yeah. Survivor bias, and no survey really corrects for it. So treat those as directional, not as a law. And there's one more honest caveat from OpenView's own data — expansion barely matters early on. Below a million in ARR, it's only about fourteen percent of your net-new revenue.
+
+HOST_B: So a seed-stage founder obsessing over NRR is kind of optimizing the wrong thing?
+
+HOST_A: For their stage, basically yes. NRR-driven growth is a later-stage phenomenon. Early on you still live and die by new logos. The compounding back-end only really kicks in once you've got a base big enough to expand. So: clean formula, genuinely central to PLG, but the benchmarks are heuristics and the timing matters.
+
+HOST_B: That's a much more useful version than "get above a hundred percent." Structure first, then the asterisks.
