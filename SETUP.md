@@ -83,7 +83,7 @@ The Git plugin now pulls changes when Obsidian opens and every 10 minutes, and c
 
 Create the folder `~/.config/learning-vault/` and copy `.tools/learncast/.env.example` into it as `.env`. Set `LEARNCAST_TTS_PROVIDER` to the owner's choice from step 1.
 
-**ElevenLabs.** Ask the owner to sign up at elevenlabs.io and choose a plan. Then: profile menu → **API Keys** → **Create API key**, with access to Text to Speech. Open the `.env` file in a text editor (`open -e ~/.config/learning-vault/.env` on macOS, `notepad $env:USERPROFILE\.config\learning-vault\.env` on Windows) and ask the owner to paste the key after `ELEVENLABS_API_KEY=` and save.
+**ElevenLabs.** Ask the owner to sign up at elevenlabs.io and choose a plan. A university student should stay on the free plan at first and check the account menu for **Student Program**, which has offered three months of the Creator plan free after SheerID verification. Then: profile menu → **API Keys** → **Create API key**, with access to Text to Speech. Open the `.env` file in a text editor (`open -e ~/.config/learning-vault/.env` on macOS, `notepad $env:USERPROFILE\.config\learning-vault\.env` on Windows) and ask the owner to paste the key after `ELEVENLABS_API_KEY=` and save.
 
 **OpenAI.** The same, with a key from platform.openai.com → API keys, pasted after `OPENAI_API_KEY=`.
 
@@ -111,7 +111,8 @@ uv run python -c "import secrets; print(secrets.token_hex(12))"
 2. Allow a bucket policy to grant public reads: `aws s3api put-public-access-block --bucket <bucket> --public-access-block-configuration BlockPublicAcls=true,IgnorePublicAcls=true,BlockPublicPolicy=false,RestrictPublicBuckets=false`.
 3. Let anyone read objects inside the random folder only, so nobody can list the bucket: a bucket policy allowing `s3:GetObject` on `arn:aws:s3:::<bucket>/<prefix>/*` for `"Principal": "*"`.
 4. Create an IAM user `vault-media-publisher` whose only permission is `s3:GetObject` and `s3:PutObject` on `arn:aws:s3:::<bucket>/<prefix>/*`, and make an access key for it.
-5. Put the settings in the `.env` file: `MEDIA_BUCKET`, `MEDIA_PREFIX`, `MEDIA_REGION`, `MEDIA_PUBLIC_URL=https://<bucket>.s3.<region>.amazonaws.com`, and the publisher's `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`. Open the file for the owner to paste the secret key, or write it yourself straight from the command output without showing it in the chat.
+5. Upload a file containing `[]` as `<prefix>/episodes.json`. The publisher has no permission to list the bucket, so S3 answers a missing file with "access denied", and the first publish would fail.
+6. Put the settings in the `.env` file: `MEDIA_BUCKET`, `MEDIA_PREFIX`, `MEDIA_REGION`, `MEDIA_PUBLIC_URL=https://<bucket>.s3.<region>.amazonaws.com`, and the publisher's `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`. Open the file for the owner to paste the secret key, or write it yourself straight from the command output without showing it in the chat.
 
 **Cloudflare R2.** Ask the owner to create a Cloudflare account and turn on R2 (it asks for a card even on the free tier). In the Cloudflare dashboard, guide them to create a bucket, turn on its **Public Development URL** (`r2.dev`), and create an R2 API token with Object Read & Write on that bucket only. Settings: `MEDIA_BUCKET`, `MEDIA_PREFIX`, `MEDIA_PUBLIC_URL=https://pub-<id>.r2.dev`, `MEDIA_REGION=auto`, `MEDIA_S3_ENDPOINT=https://<account id>.r2.cloudflarestorage.com`, and the token's Access Key ID and Secret Access Key as `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`. A public `r2.dev` URL lets anyone read any object whose name they know, so the random folder name is the only privacy, as with S3.
 
@@ -133,7 +134,7 @@ Ask the owner to do these steps on the phone. Explain each one as they go.
 Skip this if the owner skipped Anki.
 
 1. Install Anki (`brew install --cask anki`, or `winget install --id Anki.Anki -e`).
-2. Ask the owner to open Anki, create a free AnkiWeb account when it offers sync, and install the **AnkiConnect** add-on: Tools → Add-ons → Get Add-ons → code `2055492159`. Restart Anki.
+2. Ask the owner to open Anki, create a free AnkiWeb account when it offers sync, and install the **AnkiConnect** add-on: Tools → Add-ons → Get Add-ons → code `2055492159`. Then allow Obsidian to reach it: Tools → Add-ons → AnkiConnect → Config, and add `"app://obsidian.md"` to `webCorsOriginList`. Restart Anki. If Obsidian was open before Anki answered, switch the Obsidian_to_Anki plugin off and on so it connects.
 3. Check that it answers: `curl -s localhost:8765 -X POST -d '{"action":"version","version":6}'` (on Windows use `curl.exe` and escape the quotes, or Python). It should print a version number.
 4. Explain to the owner: after the `learn` skill writes flashcards into a note, Anki must be open, and they press the Obsidian_to_Anki icon in Obsidian's left ribbon to send the cards. Anki then syncs them to the phone through AnkiWeb.
 
